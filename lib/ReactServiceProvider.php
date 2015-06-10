@@ -12,10 +12,8 @@ class ReactServiceProvider extends ServiceProvider {
 
   public function boot() {
 
-    Blade::extend(function($view, $compiler) {
-      $pattern = $compiler->createMatcher('react_component');
-
-      return preg_replace($pattern, '<?php echo React::render$2; ?>', $view);
+    Blade::directive('react_component', function($expression) {
+      return "<?php echo React::render{$expression}; ?>";
     });
 
     $this->publishes([

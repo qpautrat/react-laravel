@@ -4,7 +4,7 @@
   "license": "MIT",
   "keywords": ["react", "reactjs", "laravel"],
   "require": {
-    "illuminate/support": "~5.0",
+    "illuminate/support": "5.1.*",
     "reactjs/react-php-v8js": "dev-master"
   },
   "require-dev": {
